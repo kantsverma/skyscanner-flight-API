@@ -271,7 +271,7 @@ function getresult1(myval,b)
 <div class="flight" >
 		<b><u>Flights</u></b>
         <div class="overlay" id="flightloader" style='display:none'>
-        <img id="upimg1" style='top: 5%;' alt="Loading please wait..." src="images/flight-loader.GIF" />
+        <img id="upimg1" style='top: 5%;' alt="Loading please wait..." src="http://www.muzenly.com/skin/frontend/default/mobileshoppe/images/flight-loader.GIF" />
         </div>
 		<div class="f-prime">
 			<span>
