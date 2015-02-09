@@ -221,10 +221,12 @@ function myFunction1()
 		
 	$("#originplace1" ).autocomplete(
 	{
+        
 		source: myarr,
 		select: function(event, ui) 
 		{
-			//alert(ui.item.idx); 
+			//alert(ui.item.idx);
+            $('#flightloader').show();	 
 			$('#myid').val(ui.item.idx);
 			$('#mylabel').val(ui.item.label);
 			getresult1(ui.item.idx,ui.item.label);
@@ -262,14 +264,18 @@ function getresult1(myval,b)
 	tt=low;
 	$('#curprice').show();	
 	$('#curprice1').html(tt);
+    $('#flightloader').hide();	
 	//showcities1(myval,low);
 }    
 </script>
 <div class="flight" >
 		<b><u>Flights</u></b>
+        <div class="overlay" id="flightloader" style='display:none'>
+        <img id="upimg1" style='top: 5%;' alt="Loading please wait..." src="images/flight-loader.GIF" />
+        </div>
 		<div class="f-prime">
 			<span>
-				<label>From your city</label>
+				<label>Select from Auto suggest</label>
 				<form name="form" id="form">
 					<input type="text" name="originplace1" id="originplace1" onkeyup="myfunct()">
 				</form>
